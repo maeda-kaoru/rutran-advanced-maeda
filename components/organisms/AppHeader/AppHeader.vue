@@ -24,32 +24,31 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 header {
   border-bottom: solid 0.5px black;
   padding: 0 20px;
-}
-p {
-  font-size: 10px;
-}
-.menu {
-  width: 100%;
-  padding: 15px 0;
-  display: flex;
-}
-
-img {
-  width: 40px;
-  height: 40px;
-}
-.menu-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
+  p {
+    font-size: 10px;
+  }
+  .menu {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    .menu-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
 </style>
