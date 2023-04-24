@@ -1,3 +1,4 @@
+// 下記の赤線はnuxt3のエラーなので気にしなくていいです
 export default defineNuxtConfig({
     ssr: false,
     css: ["@/assets/scss/reset.css"],
