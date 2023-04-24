@@ -2,7 +2,6 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "compilerOptions": {
-    "outFile": "./dist/nuxt.config.js",
     "allowJs": true,
     "types": [
       "vue"
