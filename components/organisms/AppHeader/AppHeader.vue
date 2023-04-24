@@ -1,29 +1,23 @@
 <template>
   <header>
-    <div class="header">
-    <div class="menu-left">
-        <p>フリーランスエンジニア向けIT求人・案件サイト[フリーランススタート]</p>
-        <img src="../../../assets/img/icon-facebook2.svg">
-    </div>
-<div class="menu-right">
-              <nuxt-link v-for="(link, key) in links" :key="key" :to="link.to">{{
-        link.text
-      }}</nuxt-link>
-</div>
-    
+    <p>フリーランスエンジニア向けIT求人・案件サイト【フリーランススタート】</p>
+    <div class="menu">
+      <div class="menu-left">
+        <img src="../../../assets/img/rocket_icon.png" />
+      </div>
+      <div class="menu-right">
+        <nuxt-link v-for="(link, key) in links" :key="key" :to="link.to">{{
+          link.text
+        }}</nuxt-link>
+      </div>
     </div>
   </header>
 </template>
 
-<script>
+<script lang='ts'>
 export default {
-
-
   setup() {
-
-    const links = reactive([
-      { text: "案件を探す", to: "#" },
-    ]);
+    const links = reactive([{ text: "案件を探す", to: "#" }]);
 
     return { links };
   },
@@ -31,23 +25,31 @@ export default {
 </script>
 
 <style scoped>
-.header{
+header {
+  border-bottom: solid 0.5px black;
+  padding: 0 20px;
+}
+p {
+  font-size: 10px;
+}
+.menu {
   width: 100%;
+  padding: 15px 0;
   display: flex;
 }
-.menu-left{
-  width: 50%;
+
+img {
+  width: 40px;
+  height: 40px;
 }
-img{
-  width: 30px;
-  height: 30px;
+.menu-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
-p{
-  font-size: 12px;
-}
-.menu-right{
-width: 50%;
-text-align: end;
-padding: 50px 50px;
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 </style>
