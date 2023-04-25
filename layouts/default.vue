@@ -7,10 +7,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
 import { AppHeader } from "../components/organisms/Header";
 import { AppFooter } from "../components/organisms/Footer";
-// typescriptでは,defineComponentを使います。これはexport defaultの中でtypeセーフかどうか調べてくれます
+import { defineComponent } from "vue";
 export default defineComponent({
   components: { AppHeader, AppFooter },
   // ...
