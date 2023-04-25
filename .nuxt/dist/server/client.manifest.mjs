@@ -6,10 +6,10 @@ export default {
     "module": true,
     "resourceType": "script"
   },
-  "/Users/maedakaoru/Desktop/上級/rutran-advanced-maeda/node_modules/nuxt/dist/app/entry.js": {
+  "/Users/motegiyuuta/Desktop/students/rutran-advanced-maeda/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "/Users/maedakaoru/Desktop/上級/rutran-advanced-maeda/node_modules/nuxt/dist/app/entry.js"
+    "file": "/Users/motegiyuuta/Desktop/students/rutran-advanced-maeda/node_modules/nuxt/dist/app/entry.js"
   }
 }

@@ -5,7 +5,7 @@
         <p>
           フリーランスエンジニア向けIT求人・案件サイト[フリーランススタート]
         </p>
-        <img src="../../../assets/img/icon-facebook2.svg" />
+        <!-- <img src="../../../assets/img/icon-facebook2.svg" /> -->
       </div>
       <div class="menu-right">
         <nuxt-link v-for="(link, key) in links" :key="key" :to="link.to">{{
@@ -18,7 +18,7 @@
 
 
 <script lang="ts">
-import { defineComponent, reactive } from "@nuxtjs/composition-api";
+import { defineComponent, reactive } from "vue";
 export default defineComponent({
   setup() {
     // link.toとlink.textでエラーが出るので、anyをつけておきました。
