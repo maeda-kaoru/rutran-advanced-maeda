@@ -1,4 +1,4 @@
 .DS_Store
-.nuxt
-node_modules
-.output
+/.nuxt
+/node_modules
+/.output
