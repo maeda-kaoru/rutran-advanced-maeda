@@ -11,5 +11,16 @@ export default defineNuxtConfig({
         },
       },
     },
+    build: {
+      optimizeDeps: {
+        include: [
+          'vue',
+          'vue-router'
+        ]
+      },
+      transpile: [
+        '@unhead/vue'
+      ]
+    }
   });
   

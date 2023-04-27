@@ -13,7 +13,5 @@
     "nuxt": "^3.4.2",
     "sass": "^1.62.1"
   },
-  "dependencies": {
-    "@nuxtjs/composition-api": "^0.33.1"
-  }
+  "dependencies": {}
 }
