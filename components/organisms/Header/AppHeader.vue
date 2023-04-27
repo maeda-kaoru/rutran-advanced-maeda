@@ -1,20 +1,17 @@
 <template>
   <header>
-    <div class="header">
-      <div class="menu-left">
-        <p>
-          フリーランスエンジニア向けIT求人・案件サイト[フリーランススタート]
-        </p>
-        <!-- <img src="../../../assets/img/icon-facebook2.svg" /> -->
-      </div>
-      <div class="menu-right">
-        <nuxt-link v-for="(link, key) in links" :key="key" :to="link.to">{{
-          link.text
-        }}</nuxt-link>
-      </div>
+    <div class="menu-left">
+      <p>フリーランスエンジニア向けIT求人・案件サイト[フリーランススタート]</p>
+      <img src="../../../assets/img/rocket_icon.png" />
+    </div>
+    <div class="menu-right">
+      <nuxt-link v-for="(link, key) in links" :key="key" :to="link.to">{{
+        link.text
+      }}</nuxt-link>
     </div>
   </header>
 </template>
+
 
 
 <script lang="ts">
@@ -28,24 +25,21 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.header {
-  width: 100%;
-  display: flex;
-}
-.menu-left {
-  width: 50%;
-}
-img {
-  width: 30px;
-  height: 30px;
-}
-p {
-  font-size: 12px;
-}
-.menu-right {
-  width: 50%;
-  text-align: end;
-  padding: 50px 50px;
+<style lang='scss' scoped>
+header {
+  padding: 10px 20px 15px 20px;
+  p {
+    font-size: 12px;
+  }
+  .menu-left {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .menu-right {
+    text-align: end;
+    padding: 50px 50px;
+  }
 }
 </style>
