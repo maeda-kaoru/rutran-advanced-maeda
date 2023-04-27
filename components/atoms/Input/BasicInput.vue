@@ -8,8 +8,7 @@
 </template>
   
 <script setup lang="ts">
-import { PropType, defineProps } from "vue";
-
+import { PropType } from "vue";
 type InputType = "text" | "number" | "email" | "password";
 // memo TypeScriptでは型を絞るだけ絞った方が良いです
 // script setupの例を書きましたが、難しかったら今までの書き方でもいいです
