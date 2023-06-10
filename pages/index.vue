@@ -1,8 +1,44 @@
 <template>
-  <div>
-    <p>ページ</p>
+  <div class="section1">
+    <img src="../assets/img/top-logo.svg" />
+    <p>案件・求人数[変数]件（05/18更新)</p>
+    <p style="font-weight: bold; font-size: 20px">
+      フリーランスエンジニア専用のIT求人・案件検索サイトで仕事探し
+    </p>
+  </div>
+  <div class="section2">
+    <p style="font-weight: bold; font-size: 20px">フリーワードで案件検索</p>
   </div>
 </template>
 
-<script lang="ts">
+<script>
+export default {
+  components: {},
+
+  setup() {},
+};
 </script>
+
+<style lang='scss' scoped>
+template {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 35%;
+  }
+}
+.section2 {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+</style>
