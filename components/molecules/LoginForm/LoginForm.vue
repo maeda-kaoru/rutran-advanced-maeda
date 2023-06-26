@@ -30,7 +30,7 @@ export default defineComponent({
       // ログインリクエストを送信
       axios
         .post(
-          "https://us-central1-modaneducation.cloudfunctions.net/registration",
+          "https://us-central1-modaneducation.cloudfunctions.net/AuthResource",
           {
             email: email.value,
             password: password.value,
