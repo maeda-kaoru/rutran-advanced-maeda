@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2>ログイン</h2>
-    <form @submit.prevent="login">
+    <h2>新規会員登録</h2>
+    <form @submit.prevent="register">
       <InputEmail v-model="email" />
       <Password v-model="password" />
-      <Button />
+      <Button text="✉︎ 同意して新規登録する（無料）" color="#F86987" />
     </form>
   </div>
 </template>
@@ -26,33 +26,32 @@ export default defineComponent({
     const email = ref("");
     const password = ref("");
 
-    const login = () => {
-      // ログインリクエストを送信
+    const register = () => {
+      // 会員登録リクエストを送信
       axios
         .post(
-          "https://us-central1-modaneducation.cloudfunctions.net/AuthResource",
+          "https://us-central1-modaneducation.cloudfunctions.net/registration",
           {
             email: email.value,
             password: password.value,
           }
         )
         .then((response) => {
-          // ログイン成功の処理
+          // 会員登録成功の処理
           console.log(response.data);
-          // ユーザーをダッシュボードやホームページにリダイレクトします
-          // router.push("/dashboard");
+          // 登録後のリダイレクトなどの処理を追加します
         })
         .catch((error) => {
-          // ログイン失敗の処理
+          // 会員登録失敗の処理
           console.error(error);
-          alert("ログインに失敗しました");
+          alert("会員登録に失敗しました");
         });
     };
 
     return {
       email,
       password,
-      login,
+      register,
     };
   },
 });

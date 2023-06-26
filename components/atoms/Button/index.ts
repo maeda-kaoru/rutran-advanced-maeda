@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue'
-import LoginButton from './LoginButton.vue'
+import Button from './Button.vue'
 
-export { LoginButton }
+export { Button }
 
 export default defineComponent({
   // ...
