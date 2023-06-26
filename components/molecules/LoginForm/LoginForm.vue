@@ -2,15 +2,16 @@
   <div>
     <h2>ログイン</h2>
     <form @submit.prevent="login">
-      <InputEmail />
-      <Password />
+      <InputEmail v-model="email" />
+      <Password v-model="password" />
       <LoginButton />
     </form>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import axios from "axios";
 import { InputEmail } from "../../atoms/InputEmail";
 import { Password } from "../../atoms/Password";
 import { LoginButton } from "../../atoms/LoginButton";
@@ -22,26 +23,34 @@ export default defineComponent({
     LoginButton,
   },
   setup() {
-    const InputEmail = ref("");
+    const email = ref("");
     const password = ref("");
 
     const login = () => {
-      // ログインロジックをここに記述します
-      // APIリクエストや他の認証メカニズムを使用することができます
-
-      // ログインロジックの例
-      if (InputEmail.value === "admin" && password.value === "password") {
-        // ログイン成功
-        // ユーザーをダッシュボードやホームページにリダイレクトします
-        router.push("/dashboard");
-      } else {
-        // ログイン失敗
-        alert("無効なユーザー名またはパスワードです");
-      }
+      // ログインリクエストを送信
+      axios
+        .post(
+          "https://us-central1-modaneducation.cloudfunctions.net/registration",
+          {
+            email: email.value,
+            password: password.value,
+          }
+        )
+        .then((response) => {
+          // ログイン成功の処理
+          console.log(response.data);
+          // ユーザーをダッシュボードやホームページにリダイレクトします
+          // router.push("/dashboard");
+        })
+        .catch((error) => {
+          // ログイン失敗の処理
+          console.error(error);
+          alert("ログインに失敗しました");
+        });
     };
 
     return {
-      InputEmail,
+      email,
       password,
       login,
     };
