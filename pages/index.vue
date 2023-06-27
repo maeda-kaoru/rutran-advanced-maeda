@@ -1,13 +1,15 @@
 <template>
-  <div class="section1">
-    <img src="../assets/img/top-logo.svg" />
-    <p>案件・求人数[変数]件（05/18更新)</p>
-    <p class="Subtitle">
-      フリーランスエンジニア専用のIT求人・案件検索サイトで仕事探し
-    </p>
-  </div>
-  <div class="section2">
-    <p style="f; font-size: 20px">フリーワードで案件検索</p>
+  <div class="top_menu">
+    <div class="section1">
+      <img src="../assets/img/top-logo.svg" />
+      <p>案件・求人数[変数]件（05/18更新)</p>
+      <p class="Subtitle">
+        フリーランスエンジニア専用のIT求人・案件検索サイトで仕事探し
+      </p>
+    </div>
+    <div class="section2">
+      <p style="f; font-size: 20px">フリーワードで案件検索</p>
+    </div>
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-template {
+.top_menu {
   width: 100%;
   display: flex;
   justify-content: center;
