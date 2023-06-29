@@ -1,6 +1,7 @@
 <template>
   <div>
     <button type="submit" class="login-button">{{ text }}</button>
+    <!-- <button @click="$emit('clickSubmit')" type="button">{{ text }}</button> -->
   </div>
 </template>
 
@@ -12,6 +13,10 @@ export default {
     borderRadius: { type: String, default: "10px" },
     fontsize: { type: String, default: "18px" },
   },
+  //   const emit = defineEmits(["clickSubmit"]);
+  // const props = defineProps({
+  //   text: {type: String,default:'送信'}
+  // })
 };
 </script>
 

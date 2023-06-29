@@ -1,15 +1,38 @@
+
+
 <template>
   <div>
     <label for="password">パスワード</label>
-    <input type="password" id="password" v-model="password" required />
+    <input
+      :type="type"
+      :id="password"
+      :placeholder="placeholder"
+      :value="value"
+      @input="$emit('updateInput', $event)"
+      v-model="email"
+      required
+    />
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { defineComponent } from "vue";
+import { PropType } from "vue";
+type InputType = "password";
 
-export default defineComponent({
-  setup() {},
+const props = defineProps({
+  type: {
+    type: String as PropType<InputType>, // Proptypeで更に型を絞ってあげる。
+    default: "password",
+  },
+  placeholder: {
+    type: String,
+    default: "",
+  },
+  value: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 

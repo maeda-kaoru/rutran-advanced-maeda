@@ -3,15 +3,36 @@
 <template>
   <div>
     <label for="InputEmail">メールアドレス</label>
-    <input type="email" id="InputEmail" v-model="username" required />
+    <input
+      :type="type"
+      :id="InputEmail"
+      :placeholder="placeholder"
+      :value="value"
+      @input="$emit('updateInput', $event)"
+      v-model="email"
+      required
+    />
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { defineComponent } from "vue";
+import { PropType } from "vue";
+type InputType = "email";
 
-export default defineComponent({
-  setup() {},
+const props = defineProps({
+  type: {
+    type: String as PropType<InputType>, // Proptypeで更に型を絞ってあげる。
+    default: "email",
+  },
+  placeholder: {
+    type: String,
+    default: "",
+  },
+  value: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 
